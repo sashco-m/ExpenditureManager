@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   View receipts
+{% endblock %}
+
+{% block main %}
+
+
+
+<div class="container">
+  <form class="mt-5" action="/view_receipts" method="post">
+      {% for x in receipts%}
+      <div class="container">
+        <h2>Given name: {{ x[2] }}</h2>
+        <h3>Purchased from: {{ x[3] }}</h3>
+        <h3>Date: {{ x[6] }}</h3>
+        <h3>Total: {{ x[10] }}</h3>
+      </div>
+        <button name="submit_button" value="{{ x[0] }}" class="btn btn-primary" type="submit">Delete Receipt</button>
+      {% endfor %}
+    </form>
+</div>
+
+{% endblock %}

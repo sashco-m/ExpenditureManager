@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Settings
+{% endblock %}
+
+{% block main %}
+
+
+
+<div class="container">
+  <div class="col">
+    <h3>Edit your existing phone number</h3>
+  </div>
+  <div class="col">
+    <form action="/settings" method="post">
+    <div class="form-group">
+            <input class="form-control" name="phone" placeholder="New Phone Number: EX. 16476576489" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
