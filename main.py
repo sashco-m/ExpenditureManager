@@ -30,11 +30,11 @@ cnx.close()
 print(df)
 # AZURE KEYS
 endpoint = "https://jurasa.cognitiveservices.azure.com/"
-key = "aa94a7778a2c4563b4ab4af398738ab5" 
+key = "INSERT AZURE KEY HERE" 
 form_recognizer_client = FormRecognizerClient(endpoint, AzureKeyCredential(key))
 
 
-client = nexmo.Client(key='e20bd8c1', secret='2esQ66LEO6TSLIvd')
+client = nexmo.Client(key='INSERT VONAGE KEY', secret='INSERT VONAGE SECRET KEY')
 
 web_site = Flask(__name__)
 secretkey = os.urandom(24)
